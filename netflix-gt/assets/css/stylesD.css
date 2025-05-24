@@ -1,0 +1,323 @@
+@font-face {
+font-family: "Netflix";
+src: url('font/AvenirNext.ttc');
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+font-family: "Netflix";
+src: url('font/AvenirNextCondensed.ttc');
+font-weight: 700;
+font-style: normal;
+}
+
+body { 
+background: black; /* Fondo clásico de Netflix*/
+color: white; /* El color de la fuente*/
+margin: 0;
+font-family: "Netflix";
+overflow-x: hidden;
+padding-bottom: 100px;    
+}
+
+.container {
+/*border: 1px solid yellow;*/
+padding: 16px;
+}
+
+.detail-post {
+display: block;
+margin: 0 auto;
+width: 50%;
+height: 500px;
+padding: 70px 0 0;
+/*border: 1px solid red;*/
+}
+
+.etiqueta {
+/*border: 1px solid green;*/
+background: gray;
+border-radius: 3px;
+padding: 2px;
+font-weight: 1000;
+color: white;
+margin-left: 5px;
+margin-right: 15px;
+}
+
+.caracteristicas {
+  /*border: 1px solid yellow;*/
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+.calidad {
+border: 1px solid white;
+background: transparent;
+color: white;
+padding: 3px;
+border-radius: 3px;
+font-size: 500;
+margin-left: 3px;
+}
+
+.title {
+font-size: 24px;
+font-weight: bold;
+}
+
+.meta {
+color: #999;
+margin-bottom: 12px;
+}
+
+.green {
+color: #00e676;
+margin-right: 60px;
+}
+
+.btn {
+display: block;
+width: 100%;
+margin: 10px 0;
+padding: 18px;
+font-size: 16px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.download {
+background-color: #333;
+color: white;
+}
+
+.play::before, .download::before {
+content: ""; 
+display: inline-block;
+width: 20px; 
+height: 20px;
+background-size: contain;
+vertical-align: middle;
+margin-right: 8px;
+}
+
+.section {
+/*border: 1px solid red;*/
+margin-top: 20px;
+}
+
+
+.section p {
+  font-size: 1.3em;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+}
+
+.section strong {
+  color: #6e6e6e;
+  font-weight: 40;
+}
+
+.credito {
+  font-size: 0.85em;
+  color: #b3b3b3;
+  margin: 0.3em 0;
+}
+
+.credito strong {
+  color: #999;
+  font-weight: 100;
+}
+
+.similares {
+display: flex;
+overflow-x: scroll;
+gap: 10px;
+scrollbar-width: none ; 
+margin-left: 1px;
+}
+
+.similares img {
+width: 150px;
+height: auto;
+border-radius: 4px;
+}
+
+.credits {
+font-family: system-ui;
+background: #212429;
+font-size: 11px;
+color: white;
+padding: 0.5rem 0;
+text-align: center;
+}
+
+.play::before {
+background-image: url("../../icons/play_editado.svg");
+}
+
+.download::before {
+background-image: url("../../icons/download.svg");
+}
+
+a {
+color: red;
+text-decoration: none;
+}
+
+
+main {
+gap: 15px;
+display: flex;
+flex-direction: column;
+}
+
+.footer {
+/*border: 1px solid red;*/
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+background: black;
+z-index: 100;
+padding: 1em 0 0;
+}
+
+.tab-list {
+/* border: 1px solid green;*/
+margin: 0;
+padding: 0;
+display: grid;
+grid-auto-flow: column;
+list-style: none;
+color: #6e6e6e;
+padding-bottom: 1em;
+}
+
+.tab-list a { /* se coloca el "a" porque está dentro del elemento <a>*/
+color: #6e6e6e;
+font-size: 0.9em;
+}
+
+.tab-item {
+/*border: 1px solid purple;*/
+text-align: center;
+font-size: .9em;
+}
+
+.tab-item svg {
+display: block;
+margin: auto;
+}
+
+.tab-item path {
+fill: #6e6e6e;
+}
+
+.tab-item:hover :is(path, span) {
+fill: white;
+color: white;
+}
+
+.bton {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+.bton-lista, .bton-rate, .bton-share { 
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  margin: 0;
+  font-weight: 900;
+  color: #6e6e6e;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.9em;
+  border-radius: 4px; 
+
+}
+
+.acciones {
+  /*border: 1px solid green;*/
+  display: flex;
+  gap: 15px; /* Aumenté el gap para mejor espaciado */
+  justify-content: start;
+  margin-top: 40px;
+}
+
+
+.icono {
+  width: 37px;
+  height: 37px;
+  filter: brightness(0) invert(1);
+}
+
+.red-line {
+  height: 5px;       
+  background: red; 
+  width: 20%;       
+  margin: 30px 50 0 0px;  
+
+}
+
+.titulo-similares {
+  font-size: 1.8em;
+  margin-bottom: 15px; 
+}
+
+.btn_back {
+  display: flex;
+  align-items: center;
+  padding: 5px 1px;
+  border: none;
+  border-radius: 4px;
+  gap: 8px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  color: white;
+  text-decoration: none;
+}
+
+.btn_back::before {
+  /*border: 1px solid white;*/
+  content: "";
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background: url("../../icons/back.svg");
+  background-size: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* === ESTRUCTURA DE PADDING Y GAP PARA BOTONES === */
+
+/* 
+  1. PADDING (Espacio INTERNO del botón)
+  padding: arriba derecha abajo izquierda;
+*/
+
+/* 
+  2. GAP (Espacio ENTRE elementos hijos en flexbox/grid)
+  - Solo aplica si el contenedor usa display: flex o grid
+  - Controla el espacio entre ícono y texto
+*/
